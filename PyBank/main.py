@@ -27,9 +27,16 @@ with open(r"C:\Users\mbannon\Desktop\python-challenge\PyBank\Resources\budget_da
     MonthCount = 0
     for row in csv_reader:
         ProfitTotal += int(row[1])
+        date.append(row[0])
+        profit.append(int(row[1]))
         MonthCount += 1
         print(row[0])
-        
+     
+#test loop to verify lists
+for i in range(MonthCount):
+      print(f'Month: {date[i]}')
+      print(f'Profit: {profit[i]}')
+  
 #net total amount of Profit/Losses" over the entire period
 
 
