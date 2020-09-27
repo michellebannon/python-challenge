@@ -12,6 +12,9 @@ ProfitIncrease = 0
 ProfitDecrease = 0
 AvgChange = 0
 ProfitTotal = 0
+i=0
+date = []
+profit = []
 
 #store the file path associated with the file why doesn't this work?
 #file = 'C:\Users\mbannon\Desktop\python-challenge\PyBank\Resources\budget_data.csv'
@@ -23,6 +26,7 @@ with open(r"C:\Users\mbannon\Desktop\python-challenge\PyBank\Resources\budget_da
     next(csv_reader)
     MonthCount = 0
     for row in csv_reader:
+        ProfitTotal += int(row[1])
         MonthCount += 1
         print(row[0])
         
@@ -35,7 +39,7 @@ print ()
 print("Financial Analysis")
 print("----------------------")
 print(f'Total Months: {MonthCount}' )
-print(f"Total:")
+print(f'Total: ${ProfitTotal}')
 print(f"Average Change: ")
 print(f"Greatest Increase in Profits:")
 print(f"Greatest Decreate in Profits:")
