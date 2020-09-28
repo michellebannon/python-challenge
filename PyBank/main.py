@@ -47,11 +47,17 @@ with open(r"C:\Users\mbannon\Desktop\python-challenge\PyBank\Resources\budget_da
 #find min and max amounts in profits
 ProfitDecrease = min(MonthlyChange)
 ProfitIncrease = max(MonthlyChange)
-print(ProfitDecrease)
-print(ProfitIncrease)
 
-  
+i = 0
+for i in range(MonthCount -1):
+    if ProfitDecrease == MonthlyChange[i]:
+        lowMonth = date[i]
+    if ProfitIncrease == MonthlyChange[i]:
+        highMonth = date[i]
+print(lowMonth, ProfitDecrease)
+print(highMonth, ProfitIncrease)
 
+#print results
 print()
 print ()
 print("Financial Analysis")
@@ -59,7 +65,7 @@ print("----------------------")
 print(f'Total Months: {MonthCount}' )
 print(f'Total: ${ProfitSum}')
 print(f"Average Change: ")
-print("Greatest Increase in Profits:" + str(ProfitIncrease))
-print("Greatest Decrease in Profits:" + str(ProfitDecrease))
+print("Greatest Increase in Profits:" + " ($" + str(ProfitIncrease) + ")")
+print("Greatest Decrease in Profits:" + " ($" + str(ProfitDecrease) + ")")
 
 #export to txt file
