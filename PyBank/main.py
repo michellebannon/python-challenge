@@ -63,8 +63,8 @@ print("----------------------")
 print("Total Months: " + str(MonthCount))
 print("Total: $" + str(ProfitSum))
 print("Average Change: "+" {:.2f}".format(AvgChange/(MonthCount-1))) #https://www.w3resource.com/python-exercises/string/python-data-type-string-exercise-30.php
-print("Greatest Increase in Profits:" + " ($" + str(ProfitIncrease) + ")")
-print("Greatest Decrease in Profits:" + " ($" + str(ProfitDecrease) + ")")
+print("Greatest Increase in Profits:" + highMonth + " ($" + str(ProfitIncrease) + ")")
+print("Greatest Decrease in Profits:" + lowMonth + " ($" + str(ProfitDecrease) + ")")
 
 #export to txt file
 filename = os.getcwd() + "/FinancialAnalysis.txt"
