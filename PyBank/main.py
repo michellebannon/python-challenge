@@ -14,7 +14,6 @@ ProfitDecrease = 0
 AvgChange = 0
 tmpChange = 0
 ProfitSum = 0
-i=0
 date = [] #list to contain all dates
 profit = [] #list to contain all profits
 MonthlyChange = [] #list to contain calculated change between months
@@ -62,9 +61,9 @@ print()
 print ()
 print("Financial Analysis")
 print("----------------------")
-print(f'Total Months: {MonthCount}' )
-print(f'Total: ${ProfitSum}')
-print(f"Average Change: ")
+print("Total Months: " + str(MonthCount))
+print("Total: $" + str(ProfitSum))
+print("Average Change: "+" {:.2f}".format(AvgChange/(MonthCount-1))) #https://www.w3resource.com/python-exercises/string/python-data-type-string-exercise-30.php
 print("Greatest Increase in Profits:" + " ($" + str(ProfitIncrease) + ")")
 print("Greatest Decrease in Profits:" + " ($" + str(ProfitDecrease) + ")")
 
