@@ -37,18 +37,20 @@ with open(r"C:\Users\mbannon\Desktop\python-challenge\PyBank\Resources\budget_da
             MonthlyChange.append(tmpChange)
         AvgChange += tmpChange   
         MonthCount += 1
-            
-        print(row[0])
-     
 #test loop to verify lists
 #i = 0
 #for i in range(MonthCount-1):
 #      print(f'Month: {date[i]}')
 #      print(f'Profit: {profit[i]}')
 #      print (f'Total Change: {MonthlyChange[i]}')
-     
+
+#find min and max amounts in profits
+ProfitDecrease = min(MonthlyChange)
+ProfitIncrease = max(MonthlyChange)
+print(ProfitDecrease)
+print(ProfitIncrease)
+
   
-#net total amount of Profit/Losses" over the entire period
 
 print()
 print ()
@@ -57,7 +59,7 @@ print("----------------------")
 print(f'Total Months: {MonthCount}' )
 print(f'Total: ${ProfitSum}')
 print(f"Average Change: ")
-print(f"Greatest Increase in Profits:")
-print(f"Greatest Decreate in Profits:")
+print("Greatest Increase in Profits:" + str(ProfitIncrease))
+print("Greatest Decrease in Profits:" + str(ProfitDecrease))
 
 #export to txt file
