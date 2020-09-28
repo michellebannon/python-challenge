@@ -63,12 +63,19 @@ print("----------------------")
 print("Total Months: " + str(MonthCount))
 print("Total: $" + str(ProfitSum))
 print("Average Change: "+" {:.2f}".format(AvgChange/(MonthCount-1))) #https://www.w3resource.com/python-exercises/string/python-data-type-string-exercise-30.php
-print("Greatest Increase in Profits:" + highMonth + " ($" + str(ProfitIncrease) + ")")
-print("Greatest Decrease in Profits:" + lowMonth + " ($" + str(ProfitDecrease) + ")")
+print("Greatest Increase in Profits: " + highMonth + " ($" + str(ProfitIncrease) + ")")
+print("Greatest Decrease in Profits: " + lowMonth + " ($" + str(ProfitDecrease) + ")")
 
 #export to txt file
 filename = os.getcwd() + "/FinancialAnalysis.txt"
 with open(filename, 'w') as f:
    f.write('Financial Analysis\n')
    f.write('------------------------\n')
+   f.write("Total Months: " + str(MonthCount) +"\n")
+   f.write("Total: $" + str(ProfitSum) +"\n")
+   f.write("Average Change: "+"{:.2f}".format(AvgChange/(MonthCount-1)) +"\n") #https://www.w3resource.com/python-exercises/string/python-data-type-string-exercise-30.php
+   f.write("Greatest Increase in Profits: " + highMonth + " ($" + str(ProfitIncrease) + ")\n")
+   f.write("Greatest Decrease in Profits: " + lowMonth + " ($" + str(ProfitDecrease) + ")\n")
+
+
 

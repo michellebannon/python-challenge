@@ -6,6 +6,8 @@ Created on Sat Sep 26 18:32:44 2020
 """
 #open the file
 import csv
+import os
+
 Winner = 0
 #List = csv_reader do I need to define the data as a list to find the members
 
