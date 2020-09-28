@@ -53,13 +53,12 @@ for i in range(MonthCount -1):
         lowMonth = date[i]
     if ProfitIncrease == MonthlyChange[i]:
         highMonth = date[i]
-print(lowMonth, ProfitDecrease)
-print(highMonth, ProfitIncrease)
+#Used for testing high/low profits
+#print(lowMonth, ProfitDecrease)
+#print(highMonth, ProfitIncrease)
 
 #print results
-print()
-print ()
-print("Financial Analysis")
+print("\n\nFinancial Analysis")
 print("----------------------")
 print("Total Months: " + str(MonthCount))
 print("Total: $" + str(ProfitSum))
@@ -68,3 +67,8 @@ print("Greatest Increase in Profits:" + " ($" + str(ProfitIncrease) + ")")
 print("Greatest Decrease in Profits:" + " ($" + str(ProfitDecrease) + ")")
 
 #export to txt file
+filename = os.getcwd() + "/FinancialAnalysis.txt"
+with open(filename, 'w') as f:
+   f.write('Financial Analysis\n')
+   f.write('------------------------\n')
+
