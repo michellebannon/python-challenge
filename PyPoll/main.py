@@ -6,25 +6,27 @@ Created on Sat Sep 26 18:32:44 2020
 """
 
 import csv
+import operator
 import os
 DEBUG = True
-
+temp = ""
 
 candidates = []
 i = 0
 Winner = 0
-
+tempvotes = 0
 
 #open the file
 with open(r"C:\Users\mbannon\Desktop\python-challenge\PyPoll\Resources\election_data.csv") as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=',')
     next(csv_reader)
     results = sorted(csv_reader,key=operator.itemgetter(2))     #how to sort csv https://www.youtube.com/watch?v=VvKn3Y7qAKs
-    if DEBUG == True:
-        print(results)
+    #if DEBUG == True:
+    #   print(results)
     VotesCount = 0
-    for row in csv_reader:
+    for row in results:
         VotesCount += 1
+        tempvotes += 1
     if DEBUG == True:
         print("VotesCount = " + str(VotesCount))
      
