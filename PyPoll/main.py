@@ -7,6 +7,8 @@ Created on Sat Sep 26 18:32:44 2020
 
 import csv
 import os
+DEBUG = True
+
 
 candidates = []
 i = 0
@@ -17,11 +19,14 @@ Winner = 0
 with open(r"C:\Users\mbannon\Desktop\python-challenge\PyPoll\Resources\election_data.csv") as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=',')
     next(csv_reader)
-       VotesCount = 0
-        for row in csv_reader:
-            if row [2] == temp:
-                
-            VotesCount += 1
+    results = sorted(csv_reader,key=operator.itemgetter(2))     #how to sort csv https://www.youtube.com/watch?v=VvKn3Y7qAKs
+    if DEBUG == True:
+        print(results)
+    VotesCount = 0
+    for row in csv_reader:
+        VotesCount += 1
+    if DEBUG == True:
+        print("VotesCount = " + str(VotesCount))
      
         
         
