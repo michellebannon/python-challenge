@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+
+
+@author: mbannon
+"""
+
 #initialize variables
 ProfitIncrease = 0
 ProfitDecrease = 0
